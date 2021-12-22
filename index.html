@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <script src="https://kit.fontawesome.com/5397988ffb.js" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+</head>
+<body>
+    
+    <div class="container">
+        
+        <div class="header">
+           <ul class="nav-bar">
+               <li class="nav-item"><a href="">Option</a></li>
+               <li class="nav-item"><a href="">Option</a></li>
+               <li class="nav-item"><a href="">Option</a></li>
+               <li class="nav-item"><a href="">Option</a></li>
+               <li class="nav-item nav_sub-nav">
+                   <a href="">More <i class="ti-angle-down"></i></a>
+                    <ul class="sub-nav">
+                        <li><a href="">Option 1</a></li>
+                        <li><a href="">Option 2</a></li>
+                        <li><a href="">Option 3</a></li>
+                    </ul>
+            </li>
+
+            <div onclick ="menu();" class="menu-btn nav-item">
+                <i class="ti-menu"></i>
+            </div>
+
+            <ul class="search-nav">
+                <input type="text" id="input-search">
+                <li onclick ="search();" class="search-btn nav-item"><i class="ti-search"></i></li>
+            </ul>
+
+
+           </ul>
+        </div>
+
+
+        <div class="footer">
+            <h1> Designed By n0name03</h1>
+        </div>
+
+    </div>
+</body>
+
+    <script>
+        const searchBtn = document.querySelector(".search-btn");
+        const isSearch = document.getElementById('input-search');
+        const menuBtn = document.querySelector('.menu-btn');
+        
+        
+        function search()
+        {
+            var isSearchW = document.getElementById('input-search').clientWidth;
+            if(isSearchW === 0){
+                isSearch.style.animation = "inputAnimation ease 2s .2s forwards";
+               
+            }
+            else{
+
+                isSearch.style.animation = "outputAnimation ease 2s 2s ";
+            }
+            
+
+        }
+
+        var header = document.querySelector('.header');
+        var headerHeight = header.clientHeight;
+
+        menuBtn.onclick = function(){
+            var isClose = header.clientHeight === headerHeight;
+
+            if(isClose){
+                header.style.height = 'auto';
+            }
+            else{
+                header.style.height = null;
+            }
+        }
+
+        
+    </script>
+
+</html>

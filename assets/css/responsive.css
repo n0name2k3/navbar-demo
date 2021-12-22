@@ -1,0 +1,36 @@
+@media (min-width : 1024px){
+
+}
+
+@media (min-width : 740px) and (max-width : 1023px){
+    .search-nav{
+        display: none;
+    }
+
+    .header{
+        justify-content: center;
+    }
+}
+
+@media (max-width : 739px){
+
+    .header{
+        overflow: hidden;
+    }
+
+    .search-nav{
+        display: none;
+    }
+
+    .nav-bar .nav-item{
+        display: block;
+    }
+
+    .ti-menu{
+        display: block;
+    }
+
+    .nav-bar .nav-item{
+        padding: 16px 24px;        
+    }
+}

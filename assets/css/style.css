@@ -1,0 +1,173 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.scrollbar {
+    background-color: #F5F5F5;
+    float: left;
+    height: 200px;
+    margin-bottom: 25px;
+    margin-left: 22px;
+    margin-top: 40px;
+    width: 65px;
+    overflow-y: scroll;
+}
+
+.force-overflow {
+    min-height: 450px;
+}
+
+#style-1::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+} 
+
+#style-1::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+#style-1::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+.container{
+    height: 1200px;
+    display: flex;
+}
+
+
+.header {
+    height: 50px;
+    background: #181818;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+
+
+}
+
+.nav-bar {
+    list-style: none;
+}
+
+.nav-bar .nav-item{
+    display: inline-block;
+    padding: 14px 24px;
+    color: #fff;
+    
+}
+
+.nav-bar .nav_sub-nav{
+    position: relative;
+}
+
+.nav-bar .nav-item:hover a{
+
+    color: #ccc;
+}
+
+.nav-bar .nav-item > a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    
+}
+
+.ti-angle-down{
+    font-size: 11px;
+}
+
+.sub-nav {
+    position: absolute;
+    list-style: none;
+    background: #fff;
+    min-width: 150px;
+    line-height: 2;
+    top: 50px;
+    left: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) ;
+    display: none;
+}
+
+.sub-nav li{
+    padding: 8px 16px;
+}
+
+.sub-nav li:hover{
+    background: #ccc;
+}
+
+.sub-nav li a{
+    color: #000;
+    text-decoration: none;
+}
+
+.search-nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.search-btn{
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#input-search{
+    height: 30px;
+    background: #1f1f1f;
+    border: 1px solid #ccc;
+    outline: none;
+    color: #fff;
+    opacity: 0;
+    width: 0px;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+.ti-menu{
+    
+    display: none;
+}
+
+.footer{
+    align-self: flex-end;
+}
+
+@keyframes inputAnimation {
+    from{
+        opacity: 0;
+        width: 0px;
+    }
+
+    to{
+        opacity: 1;
+        width: 400px;
+    }
+    
+}
+
+@keyframes outputAnimation {
+    to{
+        opacity: 0;
+        width: 0px;
+    }
+    
+}
